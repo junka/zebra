@@ -17,8 +17,9 @@ package bgp
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/coreswitch/netutil"
 	"testing"
+
+	"github.com/coreswitch/netutil"
 )
 
 func TestPrefixList(t *testing.T) {

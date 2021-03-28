@@ -15,7 +15,7 @@
 package fea
 
 import (
-	pb "github.com/coreswitch/zebra/api"
+	pb "github.com/junka/zebra/api"
 )
 
 type Interface struct {

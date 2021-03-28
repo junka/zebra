@@ -20,8 +20,8 @@ github.com/coreswitch/netutil v1.0.0 h1:OG+k0c3GVeI5frzUtEvrn41O4Mb2ih1gdppWTcA5
 github.com/coreswitch/netutil v1.0.0/go.mod h1:2EQtNb4SeVlMuMI54kfayih2CagBg5mVisolfP6QlK0=
 github.com/coreswitch/openconfigd v0.8.1 h1:Rj7Rdg0cl91tnI9+mxqMPJTqIUNDtzQ78jdPVQ7yKXc=
 github.com/coreswitch/openconfigd v0.8.1/go.mod h1:xv6p/9bwa7H1rGsK10e0QChCYkc7mniazYUX9SBB0yE=
-github.com/coreswitch/zebra v1.8.1 h1:pa/AUXf5Q0GNpVPU+i7auGHMEgzQ4/8S3i08oIw96pI=
-github.com/coreswitch/zebra v1.8.1/go.mod h1:PXC5yTTd6KGlKTj/ZvTNwdegfyaYfS8PWCFvnJTRE7A=
+github.com/junka/zebra v1.8.1 h1:pa/AUXf5Q0GNpVPU+i7auGHMEgzQ4/8S3i08oIw96pI=
+github.com/junka/zebra v1.8.1/go.mod h1:PXC5yTTd6KGlKTj/ZvTNwdegfyaYfS8PWCFvnJTRE7A=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=

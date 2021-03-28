@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/coreswitch/zebra/policy"
+	"github.com/junka/zebra/policy"
 )
 
 func TestCommunityList(t *testing.T) {

@@ -19,7 +19,7 @@ import (
 	"sort"
 	"strconv"
 
-	pb "github.com/coreswitch/zebra/api"
+	pb "github.com/junka/zebra/api"
 )
 
 type RouteMapMaster struct {

@@ -18,7 +18,7 @@ import (
 	"net"
 
 	"github.com/coreswitch/netutil"
-	"github.com/coreswitch/zebra/rib"
+	"github.com/junka/zebra/rib"
 )
 
 const (

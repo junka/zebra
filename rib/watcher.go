@@ -15,7 +15,7 @@
 package rib
 
 import (
-	pb "github.com/coreswitch/zebra/api"
+	pb "github.com/junka/zebra/api"
 )
 
 const (

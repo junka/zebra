@@ -19,7 +19,7 @@ import (
 
 	"github.com/coreswitch/component"
 	"github.com/coreswitch/log"
-	"github.com/coreswitch/zebra/pkg/fea"
+	"github.com/junka/zebra/pkg/fea"
 )
 
 type Server struct {

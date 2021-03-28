@@ -18,8 +18,8 @@ import (
 	"fmt"
 
 	"github.com/coreswitch/component"
-	"github.com/coreswitch/zebra/pkg/packet/bgp"
-	"github.com/coreswitch/zebra/pkg/server/module"
+	"github.com/junka/zebra/pkg/packet/bgp"
+	"github.com/junka/zebra/pkg/server/module"
 )
 
 func main() {

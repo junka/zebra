@@ -29,6 +29,7 @@ import (
 	"github.com/vishvananda/netlink"
 	"github.com/vishvananda/netlink/nl"
 	"github.com/vishvananda/netns"
+	"golang.org/x/sys/unix"
 )
 
 var NetlinkIPv4AddressEnsure = false
@@ -251,9 +252,9 @@ func deserializeRoute(m syscall.NetlinkMessage) (*RouteInfo, error) {
 					switch attr.Attr.Type {
 					case syscall.RTA_GATEWAY:
 						info.Gateway = net.IP(attr.Value)
-					case nl.RTA_ENCAP_TYPE:
+					case unix.RTA_ENCAP_TYPE:
 						encapType = attr
-					case nl.RTA_ENCAP:
+					case unix.RTA_ENCAP:
 						encap = attr
 					}
 				}
@@ -302,9 +303,9 @@ func deserializeRoute(m syscall.NetlinkMessage) (*RouteInfo, error) {
 				n.EncapSeg6 = info.EncapSeg6
 				rest = buf
 			}
-		case nl.RTA_ENCAP_TYPE:
+		case unix.RTA_ENCAP_TYPE:
 			encapType = attr
-		case nl.RTA_ENCAP:
+		case unix.RTA_ENCAP:
 			encap = attr
 		}
 	}
@@ -648,7 +649,7 @@ func linkSubscribe(inst *Server, newNs, curNs netns.NsHandle, done <-chan struct
 	go func() {
 		defer close(inst.ifChan)
 		for {
-			msgs, err := s.Receive()
+			msgs, _, err := s.Receive()
 			if err != nil {
 				return
 			}
@@ -679,7 +680,7 @@ func addrSubscribe(inst *Server, newNs, curNs netns.NsHandle, done <-chan struct
 	go func() {
 		defer close(inst.ifaddrChan)
 		for {
-			msgs, err := s.Receive()
+			msgs, _, err := s.Receive()
 			if err != nil {
 				fmt.Printf("AddrSubscribe: Receive() error: %v", err)
 				return
@@ -717,7 +718,7 @@ func routeSubscribe(inst *Server, newNs, curNs netns.NsHandle, done <-chan struc
 	go func() {
 		defer close(inst.routeChan)
 		for {
-			msgs, err := s.Receive()
+			msgs, _, err := s.Receive()
 			if err != nil {
 				return
 			}
@@ -751,7 +752,7 @@ func neighSubscribe(inst *Server, newNs, curNs netns.NsHandle, done <-chan struc
 	go func() {
 		defer close(inst.routeChan)
 		for {
-			msgs, err := s.Receive()
+			msgs, _, err := s.Receive()
 			if err != nil {
 				return
 			}
@@ -796,7 +797,7 @@ func netlinkExec(s *nl.NetlinkSocket, req *nl.NetlinkRequest, callback callbackF
 	}
 done:
 	for {
-		msgs, err := s.Receive()
+		msgs, _, err := s.Receive()
 		if err != nil {
 			return err
 		}
@@ -1169,7 +1170,7 @@ func NetlinkVrfDelete(name string, table uint32) {
 
 func NetlinkVlanAdd(name string, vlanId int, parentIndex int) {
 	fmt.Println("[netlink]NetlinkVlanAdd:", name, vlanId, parentIndex)
-	err := netlink.LinkAdd(&netlink.Vlan{netlink.LinkAttrs{Name: name, ParentIndex: parentIndex}, vlanId})
+	err := netlink.LinkAdd(&netlink.Vlan{netlink.LinkAttrs{Name: name, ParentIndex: parentIndex}, vlanId, netlink.VLAN_PROTOCOL_8021Q})
 	if err != nil {
 		fmt.Println("[netlink]NetlinkVlanAdd:", err)
 	}

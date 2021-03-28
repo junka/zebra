@@ -22,7 +22,7 @@ import (
 	"github.com/coreswitch/component"
 	"github.com/coreswitch/log"
 	"github.com/coreswitch/netutil"
-	pb "github.com/coreswitch/zebra/api"
+	pb "github.com/junka/zebra/api"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/peer"
 )

@@ -22,7 +22,7 @@ import (
 	"net"
 
 	"github.com/coreswitch/netutil"
-	"github.com/coreswitch/zebra/pkg/policy"
+	"github.com/junka/zebra/pkg/policy"
 	"github.com/vishvananda/netlink/nl"
 )
 

@@ -13,7 +13,7 @@ zebra uses [openconfigd](https://github.com/coreswitch/openconfigd) as configura
 Please build ribd as a first zebra module.
 
 ``` bash
-$ go get github.com/coreswitch/zebra/rib/ribd
+$ go get github.com/junka/zebra/rib/ribd
 ```
 
 Then execute ribd under root privilege.
@@ -24,6 +24,6 @@ $ sudo ${GOPATH}/bin/ribd
 
 ## Using zebra
 
- * [Integration with Quagga](https://github.com/coreswitch/zebra/blob/master/docs/quagga.md)
- * [Integration with GoBGP](https://github.com/coreswitch/zebra/blob/master/docs/gobgp.md)
- * [Router ID](https://github.com/coreswitch/zebra/blob/master/docs/router-id.md)
+ * [Integration with Quagga](https://github.com/junka/zebra/blob/master/docs/quagga.md)
+ * [Integration with GoBGP](https://github.com/junka/zebra/blob/master/docs/gobgp.md)
+ * [Router ID](https://github.com/junka/zebra/blob/master/docs/router-id.md)

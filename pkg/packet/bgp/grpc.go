@@ -22,7 +22,7 @@ import (
 
 	"github.com/coreswitch/cmd"
 	"github.com/coreswitch/component"
-	"github.com/coreswitch/openconfigd/proto"
+	openconfig "github.com/coreswitch/openconfigd/proto"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )

@@ -30,7 +30,7 @@ This document describes an example steps to run Quagga bgpd and ospfd with Zebra
 Install OpenConfigd with CLI and Zebra 2.0.
 
 * https://github.com/coreswitch/openconfigd/blob/master/README.md
-* https://github.com/coreswitch/zebra/blob/master/README.md
+* https://github.com/junka/zebra/blob/master/README.md
 
 Install quaggad, an openconfigd configuration gateway to quagga.
 

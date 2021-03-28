@@ -8,10 +8,10 @@ import (
 
 	"github.com/coreswitch/component"
 	"github.com/coreswitch/log"
-	"github.com/coreswitch/zebra/pkg/fea"
-	"github.com/coreswitch/zebra/pkg/fea/linux"
-	"github.com/coreswitch/zebra/pkg/server/module"
-	"github.com/coreswitch/zebra/rib"
+	"github.com/junka/zebra/pkg/fea"
+	"github.com/junka/zebra/pkg/fea/linux"
+	"github.com/junka/zebra/pkg/server/module"
+	"github.com/junka/zebra/rib"
 )
 
 func EsiHook() {

@@ -21,8 +21,8 @@ import (
 	"time"
 
 	"github.com/coreswitch/log"
-	pb "github.com/coreswitch/zebra/api"
-	"github.com/coreswitch/zebra/pkg/fea"
+	pb "github.com/junka/zebra/api"
+	"github.com/junka/zebra/pkg/fea"
 	"google.golang.org/grpc"
 )
 

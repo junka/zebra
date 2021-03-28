@@ -46,7 +46,7 @@ files: $(STAGING_DIR)
 	rsync -avz ./files/ubuntu/ $(STAGING_DIR)/
 
 zebra: $(STAGING_DIR)/usr/bin
-	go get github.com/coreswitch/zebra/rib/ribd
+	go get github.com/junka/zebra/rib/ribd
 	cp $(GOPATH)/bin/ribd $(STAGING_DIR)/usr/bin
 
 $(STAGING_DIR):
